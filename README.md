@@ -25,3 +25,13 @@ npm create vite@latest
  yarn install
 
 ```
+
+# packages install for frontend
+
+```bash
+// tailwind css
+yarn add -D tailwindcss postcss autoprefixer
+
+ // Then initialize Tailwind config files:
+yarn tailwindcss init -p
+```
