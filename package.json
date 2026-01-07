@@ -1,0 +1,20 @@
+{
+  "name": "full-stack-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HariBhandari-02/full_stack_project_practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HariBhandari-02/full_stack_project_practice/issues"
+  },
+  "homepage": "https://github.com/HariBhandari-02/full_stack_project_practice#readme"
+}
