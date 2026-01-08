@@ -1,7 +1,7 @@
-# setting up project using yarn
+# setting up project using npm
 
 - make folder using (mkdir _project-name_) then setup frontend and backend in seperate folder inside project folder.
-- yarn install to create yarn.lock and node_modules file for overall project.
+- npm install to create package-lock.json and node_modules file for overall project.
 
 # setup backend and frontend
 
@@ -10,7 +10,7 @@
 ```bash
 
 - initialize project using init -y (y- for every question asked during process in answered with yes automatically)
-yarn init -y
+npm init -y
 
 ```
 
@@ -21,8 +21,8 @@ yarn init -y
 npm create vite@latest
 -- this command does not install npm so later we can use yarn as per person choice .
 
- -then install yarn to create yarn.lock in frontend folder, also go inside frontend folder before installing.(cd frontend)
- yarn install
+ -then install npm to create package-lock.json in frontend folder, also go inside frontend folder before installing.(cd frontend)
+ npm install
 
 ```
 
@@ -30,8 +30,7 @@ npm create vite@latest
 
 ```bash
 // tailwind css
-yarn add -D tailwindcss postcss autoprefixer
+npm install tailwindcss @tailwindcss/vite
 
- // Then initialize Tailwind config files:
-yarn tailwindcss init -p
+
 ```
