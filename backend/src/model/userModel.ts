@@ -5,9 +5,14 @@ export async function postUser(data: UserPostInput) {
   const postUser = await prisma.users.create({
     data: {
       title: data.title,
-      image: data.image
+      image: data.image,
     },
   });
 
   return postUser;
+}
+
+export async function getUser() {
+  const userData = await prisma.users.findMany({});
+  return userData;
 }
