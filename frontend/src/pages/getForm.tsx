@@ -1,20 +1,30 @@
+import { useEffect, useState } from "react";
+import { getUser, type UserPostInput } from "../service/user-api";
+
 export function GetForm() {
+  const [users, setUsers] = useState<UserPostInput[]>([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const res = await getUser();
+        console.log(res.data);
+        setUsers(Array.isArray(res.data) ? res.data : []);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchUsers();
+  }, []);
+
   return (
     <>
-      <form action="">
-        <div className="p-10 flex flex-col gap-5 items-center">
-          <p>..........from database.........</p>
-          <input className="border p-2" type="text" placeholder="Title" />
-          <input
-            className="border p-2"
-            type="file"
-            placeholder="passImageword"
-          />
-          <button className=" bg-blue-700 text-white px-10 py-2 rounded-2xl">
-            Submit
-          </button>
+      {users.map((user, index) => (
+        <div key={index} className="flex flex-col justify-center items-center">
+          <p>{user.title}</p>
+          <p>{user.image}</p>
         </div>
-      </form>
+      ))}
     </>
   );
 }

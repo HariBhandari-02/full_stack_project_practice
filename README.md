@@ -14,6 +14,20 @@ npm init -y
 
 ```
 
+|
+|
+|
+|
+
+- install cors to connect to frontend port
+
+````bash
+npm install cors
+
+npm install --save-dev @types/cors
+```
+
+
 - <----------------------------For frontend-------------------------->
 
 ```bash
@@ -21,9 +35,15 @@ npm init -y
 npm create vite@latest
 -- this command does not install npm so later we can use yarn as per person choice .
 
- -then install npm to create package-lock.json in frontend folder, also go inside frontend folder before installing.(cd frontend)
- npm install
+-then install npm to create package-lock.json in frontend folder, also go inside frontend folder before installing.(cd frontend)
+npm install
 
+````
+
+- install axios to make a bridge between backend url with frontend
+
+````bash
+npm install axios
 ```
 
 # packages install for frontend
@@ -33,4 +53,4 @@ npm create vite@latest
 npm install tailwindcss @tailwindcss/vite
 
 
-```
+````
