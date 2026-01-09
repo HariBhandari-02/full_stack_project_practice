@@ -14,5 +14,5 @@ export const postUser = (data: UserPostInput) => {
 };
 
 export const getUser = () => {
-  return API.get<UserPostInput[]>("/users/get");
+  return API.get<{message: string, data: UserPostInput[]}>("/users/get");
 };

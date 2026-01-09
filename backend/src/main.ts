@@ -3,6 +3,14 @@ import cors from "cors";
 import { UserRouter } from "./router/user-router";
 
 const app = express();
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads/");
+  },
+  filename: (req)
+});
 
 app.use(express.json());
 app.use(
@@ -16,8 +24,6 @@ app.get("/", (req, res) => {
     message: "hello from express",
   });
 });
-
-
 
 UserRouter(app);
 

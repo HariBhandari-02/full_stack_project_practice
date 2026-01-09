@@ -5,8 +5,8 @@ export function Form() {
   const [title, setTitle] = useState("Title");
   const [image, setImage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+   
 
     await postUser({ title, image });
 
