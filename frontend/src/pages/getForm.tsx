@@ -8,14 +8,15 @@ export function GetForm() {
     const fetchUsers = async () => {
       try {
         const res = await getUser();
-        console.log(res.data);
-        setUsers(Array.isArray(res.data) ? res.data : []);
+        console.log("Res Data", res.data);
+        setUsers(res.data.data);
       } catch (err) {
         console.error(err);
       }
     };
     fetchUsers();
   }, []);
+  console.log("Users Data", users);
 
   return (
     <>
